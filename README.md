@@ -1,4 +1,4 @@
-# Zhart
+# ZChart
 
 ###  A pure front end data explore tool
 
