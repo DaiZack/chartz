@@ -255,13 +255,13 @@
             if (charttype == 'histogram') {
                 makeHistogram();
             } else if (charttype == 'bar') {
-                makeBar();
+                makebar();
             } else{
                 alert('comming soon');
             }
         });
 
-        function makechart() {
+        function makebar() {
             var dom = document.getElementById('mychart');
             var myChart = echarts.init(dom, null, {
                 renderer: 'canvas',
