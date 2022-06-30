@@ -122,7 +122,6 @@
                                         <select class="form-select" id="charttype">
                                             <option value="histogram">Histogram</option>
                                             <option value="bar">Bar</option>
-                                            <option value="pie">Pie</option>
                                         </select>
                                     </div>
                                     <div class="col-3">
@@ -240,7 +239,7 @@
 
                 var csv = event.target.result;
                 loaddata(csv);
-                jsonfile = JSON.stringify(data);
+                jsonfile = JSON.stringify(data, null, 2);
                 // $('#download-json').show();
                 // $('#chartoptions').show();
 
@@ -252,7 +251,14 @@
         });
 
         $('#makechart').click(function () {
-            makechart();
+            var charttype = $('#charttype').val();
+            if (charttype == 'histogram') {
+                makeHistogram();
+            } else if (charttype == 'bar') {
+                makeBar();
+            } else{
+                alert('comming soon');
+            }
         });
 
         function makechart() {
