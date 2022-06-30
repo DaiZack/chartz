@@ -7,4 +7,4 @@
 3. visualization with echarts.js
 
 # Demo 
-
+https://zchart.herokuapp.com/
